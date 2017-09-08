@@ -1,0 +1,23 @@
+web:
+    image: hitalos/laravel:latest
+    ports:
+        - 8080:80
+    volumes:
+        - ./:/var/www
+    links:
+        - db
+    environment:
+        DB_HOST: db
+        DB_DATABASE: dbname
+        DB_USERNAME: username
+        DB_PASSWORD: p455w0rd
+        DB_CONNECTION: mysql
+db:
+    image: mysql
+    ports:
+        - 33050:3306
+    environment:
+        MYSQL_DATABASE: dbname
+        MYSQL_USER: username
+        MYSQL_PASSWORD: p455w0rd
+        MYSQL_ROOT_PASSWORD: example
