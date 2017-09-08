@@ -1,5 +1,5 @@
 web:
-    image: hitalos/laravel:latest
+    image: samnydahl/rapid-laravel:latest
     ports:
         - 8080:80
     volumes:
@@ -12,6 +12,8 @@ web:
         DB_USERNAME: username
         DB_PASSWORD: p455w0rd
         DB_CONNECTION: mysql
+    stdin_open: true
+    tty: true
 db:
     image: mysql
     ports:

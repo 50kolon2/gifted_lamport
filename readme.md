@@ -39,8 +39,10 @@ Applikationen ska hantera projekt och uppgifter i projekt. Applikationen ska kun
     * [Läs mer på help.github.com](https://help.github.com/articles/cloning-a-repository/)
 * Från projektroten kör `$ docker-compose up -d`
     * [Läs mer på docs.docker.com](https://docs.docker.com/compose/)
-* Installera dependencies genom att köra `$ docker-compose exec web composer install`
-    * [Läs mer på getcomposer.org](https://getcomposer.org/doc/00-intro.md)
+* Logga in i containern genom att köra `$ docker-compose exec web sh`
+    * Installera dependencies genom att köra `$ composer install`
+        * [Läs mer på getcomposer.org](https://getcomposer.org/doc/00-intro.md)
+    * Starta webservern `$ php artisan serve --port=80 --host=0.0.0.0`
 * Sidan går att nå via webläsaren på [http://localhost:8080](http://localhost:8080)
 
 ## Tips
