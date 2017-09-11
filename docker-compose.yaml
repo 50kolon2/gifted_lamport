@@ -6,12 +6,6 @@ web:
         - ./:/var/www
     links:
         - db
-    environment:
-        DB_HOST: db
-        DB_DATABASE: dbname
-        DB_USERNAME: username
-        DB_PASSWORD: p455w0rd
-        DB_CONNECTION: mysql
     stdin_open: true
     tty: true
 db:
